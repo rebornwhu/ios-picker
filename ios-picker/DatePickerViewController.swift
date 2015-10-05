@@ -14,7 +14,10 @@ class DatePickerViewController: UIViewController {
     
     @IBAction func buttonPressed(sender: AnyObject) {
         let date = datePicker.date
-        let message = "The date and time you selected is \(date)"
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "HH:mm - MMM dd, yyyy"
+        let dateString = formatter.stringFromDate(date)
+        let message = "The date and time you selected is \(dateString)"
         let alert = UIAlertController(title: "Date and Time Selected", message: message, preferredStyle: .Alert)
         let action = UIAlertAction(title: "That's so true!", style: .Default, handler: nil)
         alert.addAction(action)
