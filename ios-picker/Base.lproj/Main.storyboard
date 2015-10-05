@@ -16,10 +16,37 @@
                     <view key="view" contentMode="scaleToFill" id="AsT-f4-Rhp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pcc-A5-6fZ">
+                                <rect key="frame" x="140" y="0.0" width="320" height="216"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="dataSource" destination="z1a-a1-SJW" id="dbJ-xu-xak"/>
+                                    <outlet property="delegate" destination="z1a-a1-SJW" id="rnx-qi-c9k"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbC-8o-pYr">
+                                <rect key="frame" x="278" y="251" width="44" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="z1a-a1-SJW" eventType="touchUpInside" id="KTo-qH-ext"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tbC-8o-pYr" firstAttribute="centerX" secondItem="AsT-f4-Rhp" secondAttribute="centerX" id="MuP-D2-FVs"/>
+                            <constraint firstItem="Pcc-A5-6fZ" firstAttribute="centerX" secondItem="AsT-f4-Rhp" secondAttribute="centerX" id="d1Z-rn-blt"/>
+                            <constraint firstItem="Pcc-A5-6fZ" firstAttribute="top" secondItem="AsT-f4-Rhp" secondAttribute="topMargin" id="ivb-cb-xQs"/>
+                            <constraint firstItem="tbC-8o-pYr" firstAttribute="top" secondItem="Pcc-A5-6fZ" secondAttribute="bottom" constant="35" id="y9c-DF-xuw"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Single" image="singleicon" id="vXt-Rq-0DU"/>
+                    <connections>
+                        <outlet property="singlePicker" destination="Pcc-A5-6fZ" id="PW1-e9-NAi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ux-0u-qWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
