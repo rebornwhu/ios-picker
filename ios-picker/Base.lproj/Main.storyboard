@@ -63,8 +63,63 @@
                     <view key="view" contentMode="scaleToFill" id="g3o-2v-iUd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="blu-H1-Nv9">
+                                <rect key="frame" x="43" y="20" width="241" height="216"/>
+                                <animations/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tIY-Cm-8HV">
+                                <rect key="frame" x="326" y="20" width="219" height="216"/>
+                                <animations/>
+                            </pickerView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cOk-JS-HOZ">
+                                <rect key="frame" x="13" y="136" width="16" height="26"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ecQ-Cx-Hpk">
+                                <rect key="frame" x="302" y="115" width="16" height="26"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o1C-oh-MhP">
+                                <rect key="frame" x="564" y="115" width="16" height="26"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ecQ-Cx-Hpk" firstAttribute="width" secondItem="cOk-JS-HOZ" secondAttribute="width" id="2lV-lv-ReC"/>
+                            <constraint firstItem="o1C-oh-MhP" firstAttribute="width" secondItem="cOk-JS-HOZ" secondAttribute="width" id="5oV-Js-aKl"/>
+                            <constraint firstItem="ecQ-Cx-Hpk" firstAttribute="width" secondItem="cOk-JS-HOZ" secondAttribute="width" id="6L4-9y-Ggs"/>
+                            <constraint firstItem="o1C-oh-MhP" firstAttribute="centerY" secondItem="blu-H1-Nv9" secondAttribute="centerY" id="7NH-ua-aGo"/>
+                            <constraint firstItem="blu-H1-Nv9" firstAttribute="top" secondItem="M9T-MJ-LgA" secondAttribute="bottom" id="AbS-uP-3My"/>
+                            <constraint firstItem="tIY-Cm-8HV" firstAttribute="centerY" secondItem="blu-H1-Nv9" secondAttribute="centerY" id="Epz-OA-SKW"/>
+                            <constraint firstItem="o1C-oh-MhP" firstAttribute="leading" secondItem="tIY-Cm-8HV" secondAttribute="trailing" id="LVn-1t-Hfz"/>
+                            <constraint firstItem="o1C-oh-MhP" firstAttribute="width" secondItem="cOk-JS-HOZ" secondAttribute="width" id="M0f-3D-tA7"/>
+                            <constraint firstItem="tIY-Cm-8HV" firstAttribute="top" secondItem="M9T-MJ-LgA" secondAttribute="bottom" id="O5Y-t2-H8H"/>
+                            <constraint firstItem="ecQ-Cx-Hpk" firstAttribute="top" secondItem="M9T-MJ-LgA" secondAttribute="bottom" id="Tye-ib-aJK"/>
+                            <constraint firstItem="cOk-JS-HOZ" firstAttribute="leading" secondItem="g3o-2v-iUd" secondAttribute="leading" id="XBs-P6-a4D"/>
+                            <constraint firstItem="tIY-Cm-8HV" firstAttribute="width" secondItem="blu-H1-Nv9" secondAttribute="width" id="XOO-6G-VEf"/>
+                            <constraint firstItem="ecQ-Cx-Hpk" firstAttribute="height" secondItem="cOk-JS-HOZ" secondAttribute="height" id="ZXc-u1-W0T"/>
+                            <constraint firstItem="cOk-JS-HOZ" firstAttribute="leading" secondItem="g3o-2v-iUd" secondAttribute="leading" id="Zdk-DT-GKf"/>
+                            <constraint firstItem="cOk-JS-HOZ" firstAttribute="centerY" secondItem="blu-H1-Nv9" secondAttribute="centerY" id="cRh-P3-Pfu"/>
+                            <constraint firstItem="o1C-oh-MhP" firstAttribute="top" secondItem="M9T-MJ-LgA" secondAttribute="bottom" id="edR-SP-04D"/>
+                            <constraint firstItem="cOk-JS-HOZ" firstAttribute="top" secondItem="M9T-MJ-LgA" secondAttribute="bottom" id="fUh-9P-sa5"/>
+                            <constraint firstItem="ecQ-Cx-Hpk" firstAttribute="leading" secondItem="blu-H1-Nv9" secondAttribute="trailing" id="mB1-PV-RbK"/>
+                            <constraint firstItem="o1C-oh-MhP" firstAttribute="height" secondItem="cOk-JS-HOZ" secondAttribute="height" id="niP-Xv-uhn"/>
+                            <constraint firstItem="ecQ-Cx-Hpk" firstAttribute="centerY" secondItem="blu-H1-Nv9" secondAttribute="centerY" id="pE5-7E-QvK"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cRh-P3-Pfu"/>
+                                <exclude reference="pE5-7E-QvK"/>
+                                <exclude reference="Epz-OA-SKW"/>
+                                <exclude reference="7NH-ua-aGo"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Double" image="doubleicon" id="mtU-w2-Zbk"/>
                 </viewController>
