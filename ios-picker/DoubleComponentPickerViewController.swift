@@ -8,8 +8,30 @@
 
 import UIKit
 
-class DoubleComponentPickerViewController: UIViewController {
+class DoubleComponentPickerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var picker1: UIPickerView!
+    @IBOutlet weak var picker2: UIPickerView!
+    
+    private let characterNames = ["Luke", "Leia", "Han", "ChewBacca", "Artoo", "Threepio", "Lando"]
+    
+    private let cars = ["Volkswagen", "BMW", "Mercedez", "Bentley"]
+    
+    @IBAction func buttonPressed(sender: AnyObject) {
+        let row1 = picker1.selectedRowInComponent(0)
+        let selected1 = characterNames[row1]
+        
+        let row2 = picker2.selectedRowInComponent(1)
+        let selected2 = cars[row2]
+        
+        let title = "\(selected1) picks \(selected2)"
+        
+        let alert = UIAlertController(title: title, message: "Different people choose different car", preferredStyle: .Alert)
+        let action = UIAlertAction(title: "Done", style: .Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,4 +54,30 @@ class DoubleComponentPickerViewController: UIViewController {
     }
     */
 
+    
+    // MARK:-
+    // MARK: Picker Data Source Methods
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 2
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if (component == 0) {
+            return characterNames.count
+        }
+        else {
+            return cars.count
+        }
+    }
+    
+    // MARK: Picker Delegate Methods
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if (component == 0) {
+            return characterNames[row]
+        }
+        else {
+            return cars[row]
+        }
+    }
+    
 }
