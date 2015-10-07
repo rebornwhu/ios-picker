@@ -110,10 +110,38 @@
                     <view key="view" contentMode="scaleToFill" id="ism-Xx-48H">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgk-eu-UOr">
+                                <rect key="frame" x="140" y="0.0" width="320" height="216"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ab5-DT-ZQt" id="mRD-lT-9VK"/>
+                                    <outlet property="delegate" destination="ab5-DT-ZQt" id="j5f-j2-fzh"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gW-pH-2xb">
+                                <rect key="frame" x="278" y="254" width="44" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="ab5-DT-ZQt" eventType="touchUpInside" id="F1X-Sg-gYd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bgk-eu-UOr" firstAttribute="centerX" secondItem="ism-Xx-48H" secondAttribute="centerX" id="1C8-Tv-0ny"/>
+                            <constraint firstItem="8gW-pH-2xb" firstAttribute="top" secondItem="bgk-eu-UOr" secondAttribute="bottom" constant="38" id="7c3-X8-leM"/>
+                            <constraint firstItem="bgk-eu-UOr" firstAttribute="centerX" secondItem="ism-Xx-48H" secondAttribute="centerX" id="DX2-cj-yqP"/>
+                            <constraint firstItem="8gW-pH-2xb" firstAttribute="centerX" secondItem="ism-Xx-48H" secondAttribute="centerX" id="lmq-dT-yA3"/>
+                            <constraint firstItem="bgk-eu-UOr" firstAttribute="top" secondItem="ism-Xx-48H" secondAttribute="topMargin" id="nqo-yY-4dC"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dependent" image="dependenticon" id="J6n-Jt-BGZ"/>
+                    <connections>
+                        <outlet property="picker" destination="bgk-eu-UOr" id="CJJ-c4-Oba"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9xg-uI-WIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

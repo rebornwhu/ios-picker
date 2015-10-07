@@ -20,6 +20,7 @@
 		89B3FFC91BC20F17001EC047 /* DoubleComponentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B3FFC81BC20F17001EC047 /* DoubleComponentPickerViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		89B3FFCB1BC20F5A001EC047 /* DependentComponentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B3FFCA1BC20F5A001EC047 /* DependentComponentPickerViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		89B3FFCD1BC20F67001EC047 /* CustomPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B3FFCC1BC20F67001EC047 /* CustomPickerViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		89E9B6AD1BC4E6400084448C /* statedictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89E9B6AC1BC4E6400084448C /* statedictionary.plist */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		89B3FFC81BC20F17001EC047 /* DoubleComponentPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleComponentPickerViewController.swift; sourceTree = "<group>"; };
 		89B3FFCA1BC20F5A001EC047 /* DependentComponentPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependentComponentPickerViewController.swift; sourceTree = "<group>"; };
 		89B3FFCC1BC20F67001EC047 /* CustomPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerViewController.swift; sourceTree = "<group>"; };
+		89E9B6AC1BC4E6400084448C /* statedictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = statedictionary.plist; path = "../../../../Downloads/Beginning iPhone Development with Swift - source code/Examples/07 - Picker Data/statedictionary.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				89B3FFC81BC20F17001EC047 /* DoubleComponentPickerViewController.swift */,
 				89B3FFCA1BC20F5A001EC047 /* DependentComponentPickerViewController.swift */,
 				89B3FFCC1BC20F67001EC047 /* CustomPickerViewController.swift */,
+				89E9B6AC1BC4E6400084448C /* statedictionary.plist */,
 				89B3FF981BC20C9C001EC047 /* Main.storyboard */,
 				89B3FF9B1BC20C9C001EC047 /* Assets.xcassets */,
 				89B3FF9D1BC20C9C001EC047 /* LaunchScreen.storyboard */,
@@ -246,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89E9B6AD1BC4E6400084448C /* statedictionary.plist in Resources */,
 				89B3FFC31BC20CB8001EC047 /* .gitignore in Resources */,
 				89B3FF9F1BC20C9C001EC047 /* LaunchScreen.storyboard in Resources */,
 				89B3FF9C1BC20C9C001EC047 /* Assets.xcassets in Resources */,
@@ -507,6 +511,7 @@
 				89B3FFBB1BC20C9D001EC047 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89B3FFBC1BC20C9D001EC047 /* Build configuration list for PBXNativeTarget "ios-pickerTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +520,7 @@
 				89B3FFBE1BC20C9D001EC047 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89B3FFBF1BC20C9D001EC047 /* Build configuration list for PBXNativeTarget "ios-pickerUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +529,7 @@
 				89B3FFC11BC20C9D001EC047 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
