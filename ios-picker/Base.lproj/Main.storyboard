@@ -65,55 +65,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blu-H1-Nv9">
-                                <rect key="frame" x="43" y="20" width="220" height="216"/>
+                                <rect key="frame" x="140" y="0.0" width="320" height="216"/>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="i4h-Kt-XlY"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="JX6-dR-yr7" id="PfK-r2-bid"/>
                                     <outlet property="delegate" destination="JX6-dR-yr7" id="bur-fc-6T9"/>
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I28-ua-5t3">
-                                <rect key="frame" x="278" y="261" width="44" height="30"/>
+                                <rect key="frame" x="278" y="244" width="44" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Select"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="JX6-dR-yr7" eventType="touchUpInside" id="l2A-Zh-p44"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tIY-Cm-8HV">
-                                <rect key="frame" x="330" y="20" width="220" height="216"/>
-                                <animations/>
-                                <connections>
-                                    <outlet property="dataSource" destination="JX6-dR-yr7" id="YTM-mM-T9d"/>
-                                    <outlet property="delegate" destination="JX6-dR-yr7" id="gxZ-Gp-ljg"/>
-                                </connections>
-                            </pickerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="I28-ua-5t3" firstAttribute="top" secondItem="M9T-MJ-LgA" secondAttribute="bottom" constant="241" id="1X8-CF-KjX"/>
-                            <constraint firstItem="tIY-Cm-8HV" firstAttribute="centerY" secondItem="blu-H1-Nv9" secondAttribute="centerY" id="Epz-OA-SKW"/>
-                            <constraint firstItem="tIY-Cm-8HV" firstAttribute="leading" secondItem="blu-H1-Nv9" secondAttribute="trailing" constant="67" id="T9D-FR-5sX"/>
-                            <constraint firstItem="blu-H1-Nv9" firstAttribute="top" secondItem="M9T-MJ-LgA" secondAttribute="bottom" id="grh-Qu-h6W"/>
-                            <constraint firstItem="I28-ua-5t3" firstAttribute="centerX" secondItem="g3o-2v-iUd" secondAttribute="centerX" id="l5D-F8-dCl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tIY-Cm-8HV" secondAttribute="trailing" constant="30" id="nGl-wz-biG"/>
-                            <constraint firstItem="blu-H1-Nv9" firstAttribute="leading" secondItem="g3o-2v-iUd" secondAttribute="leadingMargin" constant="23" id="nyM-tg-F4O"/>
-                            <constraint firstItem="tIY-Cm-8HV" firstAttribute="top" secondItem="M9T-MJ-LgA" secondAttribute="bottom" id="px8-qV-ae4"/>
+                            <constraint firstItem="I28-ua-5t3" firstAttribute="centerX" secondItem="g3o-2v-iUd" secondAttribute="centerX" id="Dib-df-cas"/>
+                            <constraint firstItem="I28-ua-5t3" firstAttribute="top" secondItem="blu-H1-Nv9" secondAttribute="bottom" constant="28" id="W5r-zi-BWP"/>
+                            <constraint firstItem="blu-H1-Nv9" firstAttribute="top" secondItem="g3o-2v-iUd" secondAttribute="topMargin" id="fLU-Fb-c64"/>
+                            <constraint firstItem="blu-H1-Nv9" firstAttribute="centerX" secondItem="g3o-2v-iUd" secondAttribute="centerX" id="ziR-E5-jUS"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Epz-OA-SKW"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Double" image="doubleicon" id="mtU-w2-Zbk"/>
                     <connections>
-                        <outlet property="picker1" destination="blu-H1-Nv9" id="bny-Xa-H4D"/>
-                        <outlet property="picker2" destination="tIY-Cm-8HV" id="CdD-e2-J2R"/>
+                        <outlet property="picker" destination="blu-H1-Nv9" id="CWx-o9-qFG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9eg-2x-M3p" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -10,18 +10,17 @@ import UIKit
 
 class DoubleComponentPickerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    @IBOutlet weak var picker1: UIPickerView!
-    @IBOutlet weak var picker2: UIPickerView!
+    @IBOutlet weak var picker: UIPickerView!
     
     private let characterNames = ["Luke", "Leia", "Han", "ChewBacca", "Artoo", "Threepio", "Lando"]
     
     private let cars = ["Volkswagen", "BMW", "Mercedez", "Bentley"]
     
     @IBAction func buttonPressed(sender: AnyObject) {
-        let row1 = picker1.selectedRowInComponent(0)
+        let row1 = picker.selectedRowInComponent(0)
         let selected1 = characterNames[row1]
         
-        let row2 = picker2.selectedRowInComponent(1)
+        let row2 = picker.selectedRowInComponent(1)
         let selected2 = cars[row2]
         
         let title = "\(selected1) picks \(selected2)"
