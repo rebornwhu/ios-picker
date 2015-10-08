@@ -7,13 +7,33 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class CustomPickerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var winLabel: UILabel!
+    @IBOutlet weak var button: UIButton!
     
     private var images:[UIImage]!
+    private var winSoundID: SystemSoundID = 0
+    private var crunchSoundID: SystemSoundID = 0
+    
+    func showButton() {
+        button.hidden = false
+    }
+    
+    func playWinSound() {
+        if winSoundID == 0 {
+            let soundURL = NSBundle.mainBundle().URLForResource("win", withExtension: "wav")! as CFURLRef
+            AudioServicesCreateSystemSoundID(soundURL, &winSoundID)
+        }
+        AudioServicesPlaySystemSound(winSoundID)
+        winLabel.text = "WINNDER!"
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1.5 * Double(NSEC_PER_MSEC))), dispatch_get_main_queue()) {
+            self.showButton()
+        }
+    }
 
     @IBAction func spin(sender: AnyObject) {
         var win = false
@@ -37,7 +57,25 @@ class CustomPickerViewController: UIViewController, UIPickerViewDelegate, UIPick
             }
         }
         
-        winLabel.text = win ? "WINNER!" : " "
+        if crunchSoundID == 0 {
+            let soundURL = NSBundle.mainBundle().URLForResource("crunch", withExtension: "wav")! as CFURLRef
+            AudioServicesCreateSystemSoundID(soundURL, &crunchSoundID)
+        }
+        AudioServicesPlaySystemSound(crunchSoundID)
+        
+        if win {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.5 * Double(NSEC_PER_MSEC))), dispatch_get_main_queue()) {
+                self.playWinSound()
+            }
+        }
+        else {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.5 * Double(NSEC_PER_MSEC))), dispatch_get_main_queue()) {
+                self.showButton()
+            }
+        }
+        
+        button.hidden = true
+        winLabel.text = " "
     }
     
     override func viewDidLoad() {
