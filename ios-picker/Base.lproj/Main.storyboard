@@ -158,10 +158,53 @@
                     <view key="view" contentMode="scaleToFill" id="bPK-Ok-Uir">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ui-fr-l0Q">
+                                <rect key="frame" x="140" y="20" width="320" height="216"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QGt-oJ-YRT" id="7FH-xK-UX8"/>
+                                    <outlet property="delegate" destination="QGt-oJ-YRT" id="lpW-tK-JEf"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pw6-Xd-MtM">
+                                <rect key="frame" x="300" y="259" width="0.0" height="0.0"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" red="0.83529411764705885" green="0.15686274509803921" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLw-yN-968">
+                                <rect key="frame" x="285" y="337" width="31" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Spin"/>
+                                <connections>
+                                    <action selector="spin:" destination="QGt-oJ-YRT" eventType="touchUpInside" id="L5l-X6-6HM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5ui-fr-l0Q" firstAttribute="centerX" secondItem="bPK-Ok-Uir" secondAttribute="centerX" id="84Y-0C-rAW"/>
+                            <constraint firstItem="xLw-yN-968" firstAttribute="top" secondItem="5ui-fr-l0Q" secondAttribute="bottom" constant="101" id="Aw5-Dw-3YP"/>
+                            <constraint firstItem="pw6-Xd-MtM" firstAttribute="top" secondItem="5ui-fr-l0Q" secondAttribute="bottom" constant="23" id="aVD-E2-ndf"/>
+                            <constraint firstItem="pw6-Xd-MtM" firstAttribute="centerX" secondItem="bPK-Ok-Uir" secondAttribute="centerX" id="fxA-wb-VkQ"/>
+                            <constraint firstItem="5ui-fr-l0Q" firstAttribute="top" secondItem="DHX-xf-uKm" secondAttribute="bottom" id="oRm-eF-fev"/>
+                            <constraint firstItem="xLw-yN-968" firstAttribute="top" secondItem="pw6-Xd-MtM" secondAttribute="bottom" constant="20" id="sFB-Lg-7KI"/>
+                            <constraint firstItem="xLw-yN-968" firstAttribute="centerX" secondItem="bPK-Ok-Uir" secondAttribute="centerX" id="x6E-kW-L32"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="sFB-Lg-7KI"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Custom" image="toolicon" id="4QT-jp-0vU"/>
+                    <connections>
+                        <outlet property="picker" destination="5ui-fr-l0Q" id="1UL-hr-x5p"/>
+                        <outlet property="winLabel" destination="pw6-Xd-MtM" id="yCd-Yz-GVy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Obn-Xg-Tsh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
